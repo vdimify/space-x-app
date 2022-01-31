@@ -21,7 +21,7 @@ abstract class _VehiclesStateBase with Store {
   bool loaded = false;
 
   @observable
-  String? error;
+  String? errorMessage;
 
   @observable
   ObservableList<Vehicle> vehicles = ObservableList<Vehicle>();
@@ -41,7 +41,7 @@ abstract class _VehiclesStateBase with Store {
 
   @action
   Future<void> getVehicles() async {
-    error = null;
+    errorMessage = null;
     loading = true;
     try {
       List<Vehicle> list = await service.getVehicles();
@@ -50,7 +50,7 @@ abstract class _VehiclesStateBase with Store {
       loaded = true;
     } catch (e) {
       loading = false;
-      error = e.toString();
+      errorMessage = e.toString();
     }
   }
 }
