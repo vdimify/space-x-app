@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:maps_launcher/maps_launcher.dart';
 
 class LaunchItem extends StatelessWidget {
   LaunchItem({Key? key, required this.name, this.date}) : super(key: key);
@@ -17,7 +18,10 @@ class LaunchItem extends StatelessWidget {
             ? "Unknown"
             : DateFormat('yyyy-MM-dd - kk:mm').format(date!)),
         trailing: const Icon(Icons.navigate_next),
-        onTap: () {},
+        onTap: () {
+          //TODO get launchpad coordinates
+          MapsLauncher.launchCoordinates(33.9208, -118.3280);
+        },
       ),
       const Divider(),
     ]);

@@ -8,11 +8,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
-      appBar: AppBar (
+      appBar: AppBar(
         actions: [
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.more_vert))
+          IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert))
         ],
       ),
       body: Column(
@@ -22,10 +20,8 @@ class HomePage extends StatelessWidget {
             padding: const EdgeInsets.all(10),
             color: Colors.red,
             child: Swiper(
-              itemBuilder: (BuildContext context,int index){
-                return Center(
-                    child: Text(index.toString())
-                );
+              itemBuilder: (BuildContext context, int index) {
+                return Center(child: Text(index.toString()));
               },
               itemCount: 3,
               pagination: const SwiperPagination(),

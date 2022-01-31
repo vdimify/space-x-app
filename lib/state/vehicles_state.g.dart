@@ -47,18 +47,18 @@ mixin _$VehiclesState on _VehiclesStateBase, Store {
     });
   }
 
-  final _$errorAtom = Atom(name: '_VehiclesStateBase.error');
+  final _$errorMessageAtom = Atom(name: '_VehiclesStateBase.errorMessage');
 
   @override
-  String? get error {
-    _$errorAtom.reportRead();
-    return super.error;
+  String? get errorMessage {
+    _$errorMessageAtom.reportRead();
+    return super.errorMessage;
   }
 
   @override
-  set error(String? value) {
-    _$errorAtom.reportWrite(value, super.error, () {
-      super.error = value;
+  set errorMessage(String? value) {
+    _$errorMessageAtom.reportWrite(value, super.errorMessage, () {
+      super.errorMessage = value;
     });
   }
 
@@ -90,7 +90,7 @@ mixin _$VehiclesState on _VehiclesStateBase, Store {
     return '''
 loading: ${loading},
 loaded: ${loaded},
-error: ${error},
+errorMessage: ${errorMessage},
 vehicles: ${vehicles},
 sortedList: ${sortedList}
     ''';

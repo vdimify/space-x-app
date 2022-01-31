@@ -28,11 +28,6 @@ class CompanyInfoListItem extends StatelessWidget {
                   textAlign: TextAlign.right,
                 ),
               )),
-          const VerticalDivider(
-            //TODO remove color
-            color: Colors.pinkAccent,
-            width: 2.0,
-          ),
           Expanded(
               flex: 3,
               child: Padding(

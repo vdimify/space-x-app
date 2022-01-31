@@ -35,7 +35,7 @@ class VehicleDetailsHeader extends StatelessWidget {
             child: Text(
               name,
               textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 26),
+              style: const TextStyle(fontSize: 26, color: Colors.white),
               softWrap: true,
               overflow: TextOverflow.fade,
             ),

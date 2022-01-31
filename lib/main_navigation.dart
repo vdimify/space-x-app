@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:space_x_app/pages/company_info_page.dart';
 import 'package:space_x_app/pages/home_page.dart';
 import 'package:space_x_app/pages/past_launches_page.dart';
-import 'package:space_x_app/pages/upcoming_launches_pages.dart';
+import 'package:space_x_app/pages/upcoming_launches_page.dart';
 import 'package:space_x_app/pages/vehicles_page.dart';
 import 'package:space_x_app/state/theme_state.dart';
 
@@ -33,16 +33,6 @@ class _MainNavigationState extends State<MainNavigation> {
   Widget build(BuildContext context) {
     bool isDark = false;
     return Scaffold(
-      drawer: Drawer(
-        child: Switch(
-          value: isDark,
-          onChanged: (value) {
-            setState(() {
-              isDark = value;
-            });
-          },
-        ),
-      ),
       body: pages[_currentTabIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentTabIndex,
